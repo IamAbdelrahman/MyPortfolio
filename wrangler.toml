@@ -1,0 +1,10 @@
+name = "my-portfolio"
+compatibility_date = "2025-08-22"
+
+[pages]
+build_output_dir = "./dist/Portfolio/browser"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
