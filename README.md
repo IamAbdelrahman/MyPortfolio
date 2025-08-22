@@ -39,7 +39,7 @@ A complete platform for managing schools.
 - 👨‍👩‍👧 Parents track children’s progress  
 - 🛠 Built with: **ASP.NET Core MVC, SQL Server, Bootstrap**
 
-👉 [View Repository](https://github.com/IamAbdelrahman/SchoolManagementSystem)
+👉 [View Repository](https://github.com/IamAbdelrahman/School_Management_System)
 
 ---
 
@@ -50,7 +50,7 @@ An online exam management system.
 - Students take exams online with real-time validation  
 - 🛠 Built with: **ASP.NET Core Web API, Angular, SQL Server**
 
-👉 [View Repository](https://github.com/IamAbdelrahman/ExaminationSystem)
+👉 [View Repository](https://github.com/IamAbdelrahman/Examination-System)
 
 ---
 
