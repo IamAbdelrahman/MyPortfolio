@@ -1,0 +1,16 @@
+<footer class="footer-section text-center">
+  <div class="container">
+    <div class="social-links">
+      <a *ngFor="let link of socialLinks" 
+      [href]="link.url" 
+      target="_blank" 
+      class="social-link" [attr.aria-label]="'Link to ' + link.name">
+      <i class="{{ link.icon }}"></i>
+      </a>
+    </div>
+    <div class="copyright">
+      <p>&copy; {{ currentYear }} Abdelrahman Kamal. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+

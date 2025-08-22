@@ -1,0 +1,194 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #34495e;
+  --light-bg: #f8f9fa;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --white: #ffffff;
+}
+.navbar {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.navbar.navbar-scrolled {
+    background: var(--white) !important;
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.brand-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.brand-accent {
+    color: var(--accent-color);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 18px;
+    justify-content: space-between;
+}
+
+.navbar-toggler-icon span {
+    display: block;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 1px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler.active .navbar-toggler-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbar-toggler.active .navbar-toggler-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler.active .navbar-toggler-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 0.5rem;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 25px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-link i {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--white) !important;
+    background: var(--gradient-primary);
+    transform: translateY(-2px);
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 15px 15px;
+        padding: 1rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-collapse.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 0.25rem 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0.75rem 1rem !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .nav-text {
+        font-size: 0.9rem;
+    }
+}
+
+.profile-img {
+  border-radius: 50%;      /* يخليها دايرة */
+  object-fit: cover;       /* يظبط أبعاد الصورة */
+  width: 100px;            /* نفس الحجم اللي انت حاطه */
+  height: 100px;           /* عشان تبقى مظبوطة */
+  border: 2px solid #fff;  /* (اختياري) إطار أبيض شكله شيك */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* ظل خفيف */
+}

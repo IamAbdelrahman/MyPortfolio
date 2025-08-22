@@ -1,0 +1,38 @@
+<section id="projects" class="projects-section">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="section-header text-center" data-aos="fade-up">
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-subtitle">A showcase of my recent work and accomplishments</p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="row">
+      <div class="col-lg-6 mb-4" *ngFor="let project of projects" data-aos="fade-up">
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <h4 class="project-subtitle">{{ project.subtitle }}</h4>
+            <p class="project-description">{{ project.description }}</p>
+            <div class="project-tech">
+              <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+            </div>
+            <div class="project-links">
+              <a [href]="project.githubLink" target="_blank" class="btn btn-primary">
+                <i class="fab fa-github me-2"></i>
+                GitHub
+              </a>
+              @if(project.title != 'Autonomous Warehouse Vehicle')
+              {
+                <a [href]="project.link" target="_blank" class="btn btn-outline-primary">
+                  <i class="fas fa-external-link-alt me-2"></i>
+                  View Project
+                </a>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

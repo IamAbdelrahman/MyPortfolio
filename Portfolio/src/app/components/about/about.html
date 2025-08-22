@@ -1,0 +1,138 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="section-header text-center" data-aos="fade-up">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Get to know more about my background, skills, and passion for development</p>
+    </div>
+
+    <div class="row">
+      <!-- Left Column - Personal Story -->
+      <div class="col-lg-6 mb-4" data-aos="fade-right">
+        <div class="about-content">
+          <div class="about-text">
+            <h3 class="about-heading">My Journey</h3>
+            <p class="lead">
+              Junior Full Stack .NET Developer with a passion for creating innovative web solutions that make a difference.
+            </p>
+            
+            <p>
+              I am a dedicated developer with experience in designing and deploying scalable web applications. 
+              My expertise spans <strong>ASP.NET Core</strong>, <strong>C#</strong>, <strong>Angular</strong>, and 
+              <strong>SQL Server</strong>, with a strong focus on RESTful API design and Entity Framework Core.
+            </p>
+
+            <p>
+              During my journey, I have successfully led various IT projects, including an Airbnb-like booking 
+              platform with AI-powered search capabilities and Stripe payment integration. I thrive in 
+              <strong>Agile/Scrum</strong> environments and am committed to producing high-quality, maintainable code.
+            </p>
+
+            <p>
+              My educational background in <strong>Communications and Electronics Engineering</strong> from Tanta University, 
+              combined with intensive training at ITI, has equipped me with both theoretical knowledge and practical 
+              skills to tackle complex development challenges.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="about-actions">
+              <button class="btn btn-primary" (click)="downloadCV()">
+                <i class="fas fa-download me-2"></i>
+                Download CV
+              </button>
+              <button class="btn btn-outline-primary" (click)="openLinkedIn()">
+                <i class="fab fa-linkedin me-2"></i>
+                LinkedIn Profile
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Personal Information -->
+      <div class="col-lg-6 mb-4" data-aos="fade-left">
+        <div class="personal-info-card">
+          <h3 class="card-title">Personal Information</h3>
+          
+          <div class="info-list">
+            <div class="info-item" *ngFor="let info of personalInfo">
+              <div class="info-icon">
+                <i [class]="info.icon"></i>
+              </div>
+              <div class="info-content">
+                <span class="info-label">{{ info.label }}:</span>
+                <span class="info-value" 
+                      [class.clickable]="info.label === 'Email'"
+                      (click)="info.label === 'Email' ? openEmail() : null">
+                  {{ info.value }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Achievements Section -->
+    <div class="row mt-5">
+      <div class="col-12" data-aos="fade-up">
+        <h3 class="section-subtitle text-center mb-4">Key Achievements</h3>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4" *ngFor="let achievement of achievements" data-aos="zoom-in">
+            <div class="achievement-card">
+              <div class="achievement-icon" [style.background-color]="achievement.color">
+                <i [class]="achievement.icon"></i>
+              </div>
+              <h4 class="achievement-title">{{ achievement.title }}</h4>
+              <p class="achievement-description">{{ achievement.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interests & Values Section -->
+    <div class="row mt-5">
+      <div class="col-lg-6 mb-4" data-aos="fade-right">
+        <div class="interests-card">
+          <h3 class="card-title">
+            <i class="fas fa-heart me-2"></i>
+            Interests & Passions
+          </h3>
+          <div class="interests-grid">
+            <span class="interest-tag" *ngFor="let interest of interests">
+              {{ interest }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-4" data-aos="fade-left">
+        <div class="values-card">
+          <h3 class="card-title">
+            <i class="fas fa-compass me-2"></i>
+            Core Values
+          </h3>
+          <ul class="values-list">
+            <li class="value-item">
+              <i class="fas fa-check-circle me-2"></i>
+              <strong>Quality First:</strong> Writing clean, maintainable code
+            </li>
+            <li class="value-item">
+              <i class="fas fa-check-circle me-2"></i>
+              <strong>Continuous Learning:</strong> Staying updated with latest technologies
+            </li>
+            <li class="value-item">
+              <i class="fas fa-check-circle me-2"></i>
+              <strong>Team Collaboration:</strong> Working effectively in Agile environments
+            </li>
+            <li class="value-item">
+              <i class="fas fa-check-circle me-2"></i>
+              <strong>User-Centric:</strong> Building solutions that solve real problems
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

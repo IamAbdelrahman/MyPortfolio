@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg fixed-top" 
+     [class.navbar-scrolled]="isScrolled">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand" (click)="scrollToSection('home')">
+      <img src="profile.PNG" alt="Logo" width="150" class="d-inline-block align-text-top profile-img" />
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="navbar-toggler" 
+            type="button" 
+            (click)="toggleMenu()"
+            [class.active]="isMenuOpen"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <!-- Navigation Menu -->
+    <div class="navbar-collapse" 
+         [class.show]="isMenuOpen">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" *ngFor="let item of navItems">
+          <a class="nav-link" 
+             [class.active]="isActive(item.id)"
+             (click)="scrollToSection(item.id)">
+            <i [class]="item.icon"></i>
+            <span class="nav-text">{{ item.label }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
