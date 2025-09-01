@@ -79,7 +79,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   downloadCV(): void {
     // You can implement CV download logic here
     console.log('Download CV clicked');
-    window.open('https://drive.google.com/file/d/1HD5OPVuvAjfK6EDb6ZJuZtJ17-tkJdlI/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1muzQuQiCRP6XOvHA92JpMxJA86nRnPVE/view?usp=sharing', '_blank');
     // Example: window.open('/assets/AbdelrahmanKamal_CV.pdf', '_blank');
   }
 
